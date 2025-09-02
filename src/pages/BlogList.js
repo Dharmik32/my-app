@@ -9,7 +9,7 @@ const BlogList = () => {
   useEffect(() => {
     setApi(process.env.REACT_APP_API);
       axios
-        .get(`${api}/api/articles?populate=*`)
+        .get(`${api}api/articles?populate=*`)
         .then((res) => {
           setArticles(res?.data?.data);
         })

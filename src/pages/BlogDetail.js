@@ -12,7 +12,7 @@ const BlogDetail = () => {
   useEffect(() => {
     axios
       .get(
-        `${process.env.REACT_APP_API}/api/articles?filters[slug][$eq]=${slug}&populate=*`
+        `${process.env.REACT_APP_API}api/articles?filters[slug][$eq]=${slug}&populate=*`
       )
       .then((res) => {
         setArticle(res.data.data[0]);
