@@ -11,7 +11,7 @@ const BlogList = () => {
       axios
         .get(`${api}/api/articles?populate=*`)
         .then((res) => {
-          setArticles(res.data.data);
+          setArticles(res?.data?.data);
         })
         .catch((err) => {
           console.error("Error fetching articles:", err);
@@ -25,7 +25,7 @@ const BlogList = () => {
       </p>
 
       <div className="blog-grid">
-        {articles.map((article) => {
+        {articles?.map((article) => {
           if (!article) return null;
 
           const {
